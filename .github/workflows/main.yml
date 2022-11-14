@@ -68,7 +68,7 @@ jobs:
         uses: Gamesight/slack-workflow-status@master
         with:
           # Required Input
-          repo_token: ${{secrets.ACCESS_TOKEN_GITHUB}}
+          repo_token: ${{secrets.GITHUB_TOKEN}}
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK }}
           # Optional Input
           channel: 'github-notifications'
