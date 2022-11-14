@@ -36,7 +36,7 @@ jobs:
     name: Slack Notification
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    # - uses: actions/checkout@v2
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
       env:
@@ -44,6 +44,6 @@ jobs:
         SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
         SLACK_ICON: https://github.com/rtCamp.png?size=48
         SLACK_MESSAGE: 'App is ready for development :rocket:'
-        SLACK_TITLE: Post Title
-        SLACK_USERNAME: rtCamp
+        SLACK_TITLE: New App Status
+        SLACK_USERNAME: github-notifications
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
