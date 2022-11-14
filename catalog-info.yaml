@@ -1,0 +1,37 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "testgoapp"
+  description: "testgoapp"
+  annotations:
+    github.com/project-slug: Team-DX-22/testgoapp
+    backstage.io/techdocs-ref: dir:.
+    argocd/app-name: dev-testgoapp
+    backstage.io/kubernetes-id: "testgoapp"
+    sonarqube.org/project-key: "testgoapp"
+    grafana/tag-selector: "kubernetes"
+    prometheus.io/rule: container_cpu_usage_seconds_total{namespace="testgoapp"}
+    prometheus.io/alert: all
+  links:
+    - url: https://testgoapp.ap-south-1.elb.amazonaws.com
+      title: Website
+      icon: Website
+    - url: https://grafana.diegoluisi.eti.br/
+      title: Dashboard
+      icon: dashboard      
+    - url: https://alerts.diegoluisi.eti.br/
+      title: Alerts
+      icon: alert 
+    - url: https://aa3abe65c0e8f48638331421a5e7ae65-1331276987.ap-south-1.elb.amazonaws.com/applications/dev-testgoapp?resource=
+      title: ArgoCD
+      icon: cloud
+  tags:
+    - golang
+    - "audio-playback"
+    - "service"
+    - "experimental"
+spec:
+  system: "audio-playback"
+  type:  "service"
+  lifecycle: "experimental"
+  owner: "retirement-engineering"
