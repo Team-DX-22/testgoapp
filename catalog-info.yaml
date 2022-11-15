@@ -6,7 +6,7 @@ metadata:
   annotations:
     github.com/project-slug: Team-DX-22/testgoapp
     backstage.io/techdocs-ref: dir:.
-    argocd/app-name: dev-testgoapp
+    argocd/app-name: nodejs-express-stage
     backstage.io/kubernetes-id: "testgoapp"
     sonarqube.org/project-key: "testgoapp"
     grafana/tag-selector: "kubernetes"
